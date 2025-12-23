@@ -1,0 +1,46 @@
+<!-- Based off the legendary site: roing.us 
+I wanted to make one for my son, my boy, hootie :) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:title" content="hootie" />
+    <meta property="og:image" content="https://f2.toyhou.se/file/f2-toyhou-se/images/41369373_VcvxsVBGb4o5nbh.png" />
+    <meta property="og:description" content="click the hoot" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/images/favicon-16x16.png">
+    <meta name="theme-color" content="#E8985E">
+    <title>pet hootie</title>
+    <link rel="stylesheet" href="style.css"  type="text/css" media="all">
+</head>
+
+<body>
+    <div class="main-container">
+        <p id="time" class="text">&nbsp;</p>
+        <div id="hootie"></div>
+        <p id="count" class="text">&nbsp;</p>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+<script>
+    // randomize images on refresh
+var images = [
+  "https://f2.toyhou.se/file/f2-toyhou-se/images/41369373_VcvxsVBGb4o5nbh.png",
+  "https://f2.toyhou.se/file/f2-toyhou-se/images/107415635_zu7hxyBaq4IJbqr.png",
+  "https://f2.toyhou.se/file/f2-toyhou-se/images/29279633_ffxXo3fNo77AHZ3.png",
+  "https://f2.toyhou.se/file/f2-toyhou-se/images/86487791_gwJdsHQJ0v4SuFE.png"
+];
+
+// this chooses a random number from all available image indices
+var randomImage = images[Math.floor(Math.random() * images.length)];
+console.log(randomImage);
+// make the URL into a proper image tag
+var image = "<img src='" + randomImage + "'>";
+// append to the div
+document.getElementById("hootie").innerHTML = image;
+
+</script>
+</html>
